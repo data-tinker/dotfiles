@@ -34,8 +34,15 @@ hi PmenuThumb ctermbg=237 guibg=Grey
 hi MatchParen cterm=none ctermbg=none ctermfg=1
 hi DiffChange ctermbg=NONE ctermfg=4
 hi DiffText ctermbg=NONE ctermfg=3
+hi diffAdded ctermbg=NONE ctermfg=2
 hi DiffAdd ctermbg=NONE ctermfg=2
 hi DiffDelete ctermbg=NONE ctermfg=1
+hi diffRemoved ctermbg=NONE ctermfg=1
+hi diffLine ctermfg=6
+hi svnRemoved ctermfg=1
+hi svnAdded ctermfg=2
+hi svnRenamed ctermfg=6
+hi svnModified ctermfg=6
 hi shFunctionKey ctermfg=1
 hi Include ctermfg=1
 hi Structure ctermfg=1
@@ -48,7 +55,8 @@ hi vimHiTerm ctermfg=6
 hi vimCommand ctermfg=1
 hi vimHiAttrib ctermfg=2
 hi svnDelimiter ctermfg=7
-hi uninportantChars ctermfg=243
+hi extraOperator ctermfg=243
+hi extraOperatorLong ctermfg=243
 
 " Python
 hi pythonOperator  ctermfg=5
@@ -76,6 +84,8 @@ hi javaScriptDocParam ctermfg=239
 hi jsxChild ctermfg=3
 hi jsxRegion ctermfg=3
 hi javaScriptOpSymbols ctermfg=243
+hi javaScriptBrowserObjects ctermfg=6
+hi javaScriptFuncEq ctermfg=243
 
 " Css
 hi cssBraces ctermfg=7
@@ -87,8 +97,7 @@ hi sassProperty ctermfg=7
 
 " Perl
 hi perlStatement ctermfg=1
-hi perlStatementInclude ctermfg=7
-hi perlStatementIncludeUse ctermfg=1
+hi perlStatementInclude ctermfg=1
 hi perlStatementFiledesc ctermfg=6
 hi perlStringStartEnd ctermfg=7
 hi perlOperator ctermfg=5
@@ -100,8 +109,8 @@ hi perlIdentifier ctermfg=7
 hi perlVarType ctermfg=7
 hi perlVariable ctermfg=7
 hi perlSubName ctermfg=6
-hi extraOperator ctermfg=243
 hi perlStatementStorage ctermfg=3
+hi perlMethodArrow ctermfg=243
 
 " Cpp
 hi cppSTLfunction ctermfg=6

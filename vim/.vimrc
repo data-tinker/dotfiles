@@ -173,8 +173,11 @@ endif
 autocmd FileType * call <SID>def_basic_syntax()
 
 function! s:def_basic_syntax()
-    syn match uninportantChars "\%(=\|;\| > \| < \| != \| + \| - \| \* \|\.\|:\)"
-    syn match extraOperator "\%(=>\|->\|::\|=>\|!==\|>>\|<<\|++\|--\|<=\|>=\)"
+    syn match extraOperator "\%(=\|;\| > \| < \| != \| + \| - \| \* \|\.\|:\| / \| % \)"
+    syn match extraOperatorLong "\%(=>\|->\|::\|=>\|!==\|>>\|<<\|++\|--\|<=\|>=\|%=\|+=\|-=\|=\~\|&&\)"
+    syn match perlMethodArrow "->" contained containedin=perlMethod
+    syn match perlMethodArrow "->" contained containedin=perlIdentifier
+    syn match perlMethodArrow "->" contained containedin=perlVarSimpleMember
 endfunction
 
 "let g:windowswap_map_keys = 0 "prevent default bindings
