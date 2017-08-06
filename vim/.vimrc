@@ -12,6 +12,7 @@ Plugin '1995eaton/vim-better-javascript-completion'
 Plugin 'mxw/vim-jsx'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'mkitt/tabline.vim'
 call vundle#end()
 "
 

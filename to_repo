@@ -3,7 +3,7 @@
 HOME=$(echo ~)
 BIN="/usr/local/bin"
 REMOTE_SERV="www-user@mytty.ru"
-GIT_REPO=$HOME/polygon/to_repo/
+GIT_REPO=$HOME/programs/to_repo/
 REMOTE_PATH="/home/www-user/www/repo"
 
 cd $HOME
