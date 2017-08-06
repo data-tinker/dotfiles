@@ -149,6 +149,6 @@ hi rubyInterpolationDelimiter ctermfg=7
 hi rubyControl ctermfg=5
 
 "Tab
-hi TabLine ctermbg=239 ctermfg=7 cterm=none
+hi TabLine ctermbg=240 ctermfg=7 cterm=none
 hi TabLineSel ctermbg=1 ctermfg=7
-hi TabLineFill ctermbg=239
+hi TabLineFill ctermbg=240
