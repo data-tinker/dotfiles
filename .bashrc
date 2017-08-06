@@ -16,8 +16,10 @@ if [ -n "$SSH_CONNECTION" ] && [ -n "$SHELL_CONNECTION" ] && [ -z "$SCREEN_EXIST
 fi
 
 export HISTSIZE=10000
+export HISTFILE=/home/$USER/.bh
 export HISTCONTROL=ignoreboth
 export EDITOR=vim
+export PAGER='less -S'
 listAll() {
     if [ $# -eq 0 ]
         then
@@ -27,9 +29,11 @@ listAll() {
     fi
 }
 alias l=listAll
+alias iperl="perl -de1"
+alias kill_likemore="sudo netstat -tulpn | grep 8000 | awk {'print \$7'} | grep -Eo '[0-9]+' | xargs kill"
 
 #color control
-export PS1="\[\033[37m\]\u@\[\033[32m\]dev\[\033[m\]:\[\033[31m\]\w\[\033[m\]\$ "
+export PS1="\[\033[37m\]\u@\[\033[33m\]dev\[\033[m\]:\[\033[31m\]\w\[\033[m\]\$ "
 export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='31'
@@ -38,3 +42,8 @@ export LS_COLORS='rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+
+export PERLBREW_ROOT="$HOME/perl5/perlbrew"
+source "$HOME/perl5/perlbrew/etc/bashrc"
+
+export PERL5LIB=/home/a.martishin/projects/admin/app/lib:/home/a.martishin/projects/admin/app/t/lib:/home/a.martishin/projects/admin/app/utils/lib:$PERL5LIB
