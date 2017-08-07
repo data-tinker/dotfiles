@@ -149,5 +149,5 @@ hi rubyControl ctermfg=5
 
 "Tab
 hi TabLine ctermbg=234 ctermfg=250 cterm=none
-hi TabLineSel ctermbg=238 ctermfg=7
+hi TabLineSel ctermbg=239 ctermfg=7
 hi TabLineFill ctermbg=234 ctermfg=234 cterm=none
