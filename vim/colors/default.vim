@@ -10,8 +10,8 @@ hi Visual term=reverse ctermbg=239
 hi Statement ctermfg=1
 hi Type ctermfg=3
 hi Title ctermfg=7
-hi StatusLine ctermbg=242  ctermfg=234
-hi StatusLineNC ctermbg=242  ctermfg=234
+hi StatusLine ctermbg=239  ctermfg=234
+hi StatusLineNC ctermbg=239  ctermfg=234
 hi VertSplit ctermbg=243  ctermfg=234
 hi Constant ctermfg=2
 hi Identifier ctermfg=1
@@ -149,5 +149,5 @@ hi rubyControl ctermfg=5
 
 "Tab
 hi TabLine ctermbg=234 ctermfg=250 cterm=none
-hi TabLineSel ctermbg=237 ctermfg=7
+hi TabLineSel ctermbg=238 ctermfg=7
 hi TabLineFill ctermbg=234 ctermfg=234 cterm=none
