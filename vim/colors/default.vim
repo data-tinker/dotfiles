@@ -1,7 +1,6 @@
 hi Search term=reverse ctermfg=7 ctermbg=1
 hi Function ctermfg=1
 hi PreProc ctermfg=6
-hi TabLineFill term=bold cterm=bold ctermbg=233
 hi ColorColumn ctermbg=234
 hi LineNr ctermfg=239 ctermbg=234
 hi SignColumn ctermfg=239 ctermbg=234
@@ -11,8 +10,8 @@ hi Visual term=reverse ctermbg=239
 hi Statement ctermfg=1
 hi Type ctermfg=3
 hi Title ctermfg=7
-hi StatusLine ctermbg=243  ctermfg=236
-hi StatusLineNC ctermbg=243  ctermfg=234
+hi StatusLine ctermbg=242  ctermfg=234
+hi StatusLineNC ctermbg=242  ctermfg=234
 hi VertSplit ctermbg=243  ctermfg=234
 hi Constant ctermfg=2
 hi Identifier ctermfg=1
@@ -149,6 +148,6 @@ hi rubyInterpolationDelimiter ctermfg=7
 hi rubyControl ctermfg=5
 
 "Tab
-hi TabLine ctermbg=240 ctermfg=7 cterm=none
-hi TabLineSel ctermbg=1 ctermfg=7
-hi TabLineFill ctermbg=240
+hi TabLine ctermbg=234 ctermfg=250 cterm=none
+hi TabLineSel ctermbg=237 ctermfg=7
+hi TabLineFill ctermbg=234 ctermfg=234 cterm=none

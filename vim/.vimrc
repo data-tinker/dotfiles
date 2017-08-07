@@ -66,7 +66,7 @@ set softtabstop=4
 set smartindent
 set undofile
 set lisp
-set autochdir
+"set autochdir
 set number
 set colorcolumn=120
 set hlsearch
@@ -74,6 +74,7 @@ set showmatch
 set fillchars+=vert:\ "
 set ignorecase
 set lazyredraw
+"set laststatus=0
 highlight link xmlEndTag xmlTag
 
 autocmd Filetype php set filetype=html
