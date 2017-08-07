@@ -184,3 +184,6 @@ endfunction
 "let g:windowswap_map_keys = 0 "prevent default bindings
 "nnoremap <silent> <C-w> :call WindowSwap#EasyWindowSwap()<CR>
 nmap <leader>w :call WindowSwap#EasyWindowSwap() <cr>
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
