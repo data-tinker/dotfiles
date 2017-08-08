@@ -5,7 +5,7 @@
 rm ~/vim.zip*
 wget -O ~/vim.tar.gz r.mytty.ru/vim.tar.gz
 tar -xzvf ~/vim.tar.gz --directory ~
-rm ~/vim.zip 2>/dev/null;
+rm ~/vim.tar.gz 2>/dev/null;
 
 
 # download screen config
@@ -28,6 +28,8 @@ hardstatus alwayslastline
 hardstatus alwayslastline "%{b kw}%H %{r}%1\` %{w}| %{-b}%c %{w}| %{-b}%d.%m.%Y %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
 startup_message off
 setenv SSH_AUTH_SOCK \$HOME/.ssh/ssh_auth_sock
+bindkey ^[^[OD prev
+bindkey ^[^[OC next
 EOF
 
 cat << EOF > ~/.ssh/rc
