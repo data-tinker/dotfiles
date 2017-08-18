@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+g++ -pipe -pthread -pedantic -Wall -ldl -rdynamic -g -O2 -std=c++14 $@ -lm -o "${@%%.*}.o"
