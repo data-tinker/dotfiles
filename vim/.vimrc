@@ -13,6 +13,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'mkitt/tabline.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 "
 
@@ -66,7 +67,7 @@ set softtabstop=4
 set smartindent
 set undofile
 set lisp
-"set autochdir
+set autochdir
 set number
 set colorcolumn=120
 set hlsearch
@@ -188,3 +189,8 @@ nmap <leader>w :call WindowSwap#EasyWindowSwap() <cr>
 
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_working_path_mode = 'ra'

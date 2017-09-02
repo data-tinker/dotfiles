@@ -56,6 +56,7 @@ hi vimHiAttrib ctermfg=2
 hi svnDelimiter ctermfg=7
 hi extraOperator ctermfg=243
 hi extraOperatorLong ctermfg=243
+hi CursorLine cterm=none
 
 " Python
 hi pythonOperator  ctermfg=5
