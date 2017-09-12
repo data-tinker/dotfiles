@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
+
+
+# download vim config
+rm ~/vim.zip*
+wget -O ~/vim.tar.gz r.mytty.ru/vim.tar.gz
+tar -xzvf ~/vim.tar.gz --directory ~
+rm ~/vim.tar.gz 2>/dev/null;
+
+
+# download screen config
 cat << EOF >> ~/.bashrc
 
 if [ -n "\$SSH_CONNECTION" ] && [ -z "\$SCREEN_EXIST" ]; then
@@ -18,6 +28,8 @@ hardstatus alwayslastline
 hardstatus alwayslastline "%{b kw}%H %{r}%1\` %{w}| %{-b}%c %{w}| %{-b}%d.%m.%Y %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
 startup_message off
 setenv SSH_AUTH_SOCK \$HOME/.ssh/ssh_auth_sock
+bindkey ^[^[OD prev
+bindkey ^[^[OC next
 EOF
 
 cat << EOF > ~/.ssh/rc
@@ -26,4 +38,7 @@ if test "\$SSH_AUTH_SOCK" ; then
 fi
 EOF
 
-rm "$(cd $(dirname $0); pwd -P)/$(basename $0)" 2>/dev/null
+# remove script
+# rm "$(cd $(dirname $0); pwd -P)/$(basename $0)"
+
+echo "success"
