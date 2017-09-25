@@ -18,6 +18,8 @@ cat << EOF >> $FILENAME
 #include <set>
 #include <unordered_map>
 #include <unordered_set>
+#include <climits>
+#include <cassert>
 
 using namespace std;
 
