@@ -11,7 +11,7 @@ rm ~/vim.tar.gz 2>/dev/null;
 # download screen config
 cat << EOF >> ~/.bashrc
 
-if [ -n "\$SSH_CONNECTION" ] && [ -z "\$SCREEN_EXIST" ]; then
+if [ -n "$SSH_CONNECTION" ] && [ -n "$SHELL_CONNECTION" ] && [ -z "$SCREEN_EXIST" ]; then
     export SCREEN_EXIST=1
     screen -DRi
 fi
