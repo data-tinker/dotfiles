@@ -30,7 +30,6 @@ listAll() {
     fi
 }
 alias l=listAll
-alias iperl="perl -de1"
 alias likemore-kill="sudo netstat -tulpn | grep 8000 | awk {'print \$7'} | grep -Eo '[0-9]+' | xargs kill"
 
 #color control
@@ -43,11 +42,6 @@ export LS_COLORS='rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
-
-export PERLBREW_ROOT="$HOME/perl5/perlbrew"
-source "$HOME/perl5/perlbrew/etc/bashrc"
-
-export PERL5LIB=/home/a.martishin/projects/admin/app/lib:/home/a.martishin/projects/admin/app/t/lib:/home/a.martishin/projects/admin/app/utils/lib:$PERL5LIB
 EOF
 
 cat << EOF > ~/.screenrc
