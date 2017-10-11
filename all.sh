@@ -24,9 +24,9 @@ export PAGER='less -S'
 listAll() {
     if [ $# -eq 0 ]
         then
-            find .* -type f | grep -v node_modules | grep -v '.un~' | grep -E '[^/]*$'
+            find . -type f | grep -v node_modules | grep -v '.un~' | grep -E '[^/]*$'
         else
-            find $1* -type f | grep -v node_modules | grep -v '.un~' | grep -E '[^/]*$'
+            find . -type f | grep -v node_modules | grep -v '.un~' | grep -E '[^/]*$'
     fi
 }
 alias l=listAll
