@@ -14,6 +14,10 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'mkitt/tabline.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Rip-Rip/clang_complete'
+Plugin 'ervandew/supertab'
 call vundle#end()
 "
 
@@ -49,9 +53,11 @@ cmap w!! w !sudo tee %
 "vmap <C-z> "+c
 "vmap <C-v> c<ESC>"+p
 "imap <C-v> <ESC>"+pa
+"encoding
 set encoding=utf-8
-set noswapfile
 set fileencoding=utf-8
+
+set noswapfile
 set showtabline=2
 set mouse=a
 set foldmethod=syntax
@@ -64,17 +70,22 @@ set tabstop=8
 set expandtab
 set shiftwidth=4
 set softtabstop=4
+set autoindent
 set smartindent
 set undofile
 set lisp
-set autochdir
+"set autochdir
 set number
 set colorcolumn=120
-set hlsearch
 set showmatch
 set fillchars+=vert:\ "
-set ignorecase
 set lazyredraw
+
+"search
+set ic
+set hls
+set is
+
 "set laststatus=0
 highlight link xmlEndTag xmlTag
 
@@ -200,3 +211,20 @@ let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 16
+
+"NERDTree
+map <C-n> :NERDTreeTabsToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeMinimalUI=1
+
+nnoremap <C-w> :tabclose<CR>
+
+"clang_complete
+let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
+let g:clang_hl_errors=1
+let g:clang_complete_auto = 0
+
+"SuperTab
+let g:SuperTabDefaultCompletionType = "context"

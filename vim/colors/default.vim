@@ -57,6 +57,7 @@ hi svnDelimiter ctermfg=7
 hi extraOperator ctermfg=243
 hi extraOperatorLong ctermfg=243
 hi CursorLine cterm=none
+hi Directory ctermfg=7
 
 " Python
 hi pythonOperator  ctermfg=5
