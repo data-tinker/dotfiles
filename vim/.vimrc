@@ -16,8 +16,6 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Rip-Rip/clang_complete'
-Plugin 'ervandew/supertab'
 call vundle#end()
 "
 
@@ -220,11 +218,3 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeMinimalUI=1
 
 nnoremap <C-w> :tabclose<CR>
-
-"clang_complete
-let g:clang_library_path='/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib'
-let g:clang_hl_errors=1
-let g:clang_complete_auto = 0
-
-"SuperTab
-let g:SuperTabDefaultCompletionType = "context"
