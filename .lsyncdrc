@@ -15,5 +15,6 @@ sync {
         compress = false,
         whole_file = false,
         binary = "/usr/local/bin/rsync"
-    }
+    },
+    init   = false
 }
