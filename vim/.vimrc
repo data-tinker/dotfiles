@@ -214,5 +214,6 @@ let g:netrw_winsize = 16
 map <C-n> :NERDTreeTabsToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeMinimalUI=1
+let NERDTreeWinSize = 40
 
 nnoremap <C-w> :tabclose<CR>
