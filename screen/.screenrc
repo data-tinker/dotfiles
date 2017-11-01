@@ -2,7 +2,7 @@ term xterm-256color
 autodetach on
 hardstatus on
 termcapinfo xterm* ti@:te@
-termcapinfo xterm* 'hs:ts=\E]2;:fs=07:ds=\E]2;screen07
+termcapinfo xterm* 'hs:ts=\E]2;:fs=\007:ds=\E]2;\007'
 vbell off
 hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{-b}%c %{w}| %{-b}%d.%m.%Y %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
 startup_message off
