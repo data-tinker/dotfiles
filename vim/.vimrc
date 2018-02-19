@@ -101,12 +101,12 @@ function Comment()
                         :s/^/\/\/
                 elseif &filetype == 'matlab'
                         :s/^/%
-		elseif &filetype == 'javascript'
-			:s/^/\/\/
+                elseif &filetype == 'javascript'
+                        :s/^/\/\/
                 elseif &filetype == 'javascript.jsx'
                         :s/^/\/\/
-		else
-		        :s/^/#
+                else
+                        :s/^/#
                 endif
         else
                 :s/^/#
@@ -123,12 +123,12 @@ function UnComment()
                         :s/^\/\//
                 elseif &filetype == 'matlab'
                         :s/^%/
-		elseif &filetype == 'javascript'
-			:s/^\/\//
+                elseif &filetype == 'javascript'
+                        :s/^\/\//
                 elseif &filetype == 'javascript.jsx'
                         :s/^\/\//
-		else
-		        :s/^#/
+                else
+                        :s/^#/
                 endif
         else
                 :s/^#/
@@ -158,18 +158,18 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 
 if &diff
-	syntax off
+        syntax off
 endif
 
 augroup Shebang
-	autocmd BufNewFile *.sh 0put =\"#!/usr/bin/env sh\<nl>\<nl>\"|$
+        autocmd BufNewFile *.sh 0put =\"#!/usr/bin/env sh\<nl>\<nl>\"|$
 augroup END
 
 " Set scripts to be executable from the shell
 function MakeExecutable()
-	if getline(1) =~ "^#!"
-		silent !chmod +x <afile>
-	endif
+        if getline(1) =~ "^#!"
+                silent !chmod +x <afile>
+        endif
 endfunction
 
 au BufWritePost * :call MakeExecutable()
@@ -179,7 +179,7 @@ set iskeyword+=_
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 if has("autocmd")
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+        au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
 autocmd FileType * call <SID>def_basic_syntax()
@@ -217,3 +217,9 @@ let NERDTreeMinimalUI=1
 let NERDTreeWinSize = 40
 
 nnoremap <C-w> :tabclose<CR>
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
