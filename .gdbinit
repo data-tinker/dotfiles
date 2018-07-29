@@ -770,5 +770,6 @@ set print pretty on
 #set print sevenbit-strings off
 #
 set follow-fork-mode child
+set step-mode on
 #set detach-on-fork off
 #set demangle-style none
