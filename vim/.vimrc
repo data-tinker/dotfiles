@@ -105,6 +105,8 @@ function Comment()
                         :s/^/\/\/
                 elseif &filetype == 'javascript.jsx'
                         :s/^/\/\/
+                elseif &filetype == 'rust'
+                        :s/^/\/\/
                 else
                         :s/^/#
                 endif
@@ -126,6 +128,8 @@ function UnComment()
                 elseif &filetype == 'javascript'
                         :s/^\/\//
                 elseif &filetype == 'javascript.jsx'
+                        :s/^\/\//
+                elseif &filetype == "rust"
                         :s/^\/\//
                 else
                         :s/^#/
@@ -185,7 +189,7 @@ endif
 autocmd FileType * call <SID>def_basic_syntax()
 
 function! s:def_basic_syntax()
-    syn match extraOperator "\%(=\|;\| > \| < \| != \| + \| - \| \* \|\.\|:\| / \| % \)"
+    syn match extraOperator "\%(=\|;\| > \| < \| != \| + \| - \|\*\|\.\|:\| / \| % \)"
     syn match extraOperatorLong "\%(=>\|->\|::\|=>\|*=\|!==\|>>\|<<\|++\|--\|<=\|>=\|%=\|+=\|-=\|=\~\|&&\|/=\||=\)"
     syn match perlMethodArrow "->" contained containedin=perlMethod
     syn match perlMethodArrow "->" contained containedin=perlIdentifier
