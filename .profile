@@ -3,7 +3,10 @@ export HISTCONTROL=ignoreboth
 export EDITOR=vim
 export SHELL_CONNECTION=true
 
-alias s="ssh -o SendEnv=SHELL_CONNECTION"
+customSsh() {
+    ssh -o SendEnv=SHELL_CONNECTION -t $1 screen -DRi
+}
+alias s=customSsh
 
 #color control
 export PS1="\[\033[37m\]\u@\[\033[32m\]local\[\033[m\]:\[\033[31m\]\w\[\033[m\]\$ "
