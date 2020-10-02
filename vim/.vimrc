@@ -16,6 +16,7 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'leafgarland/typescript-vim'
 call vundle#end()
 "
 
@@ -31,7 +32,8 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-e>" : "\<Tab>"
 
 inoremap <leader>§ <C-x><C-o>
 
-imap § <C-P>
+"imap ` <C-P>
+imap <Nul> <C-n>
 
 " Show indents
 " :IndentLinesToggle to enable
@@ -90,6 +92,7 @@ highlight link xmlEndTag xmlTag
 autocmd Filetype php set filetype=html
 au BufRead,BufNewFile *.scss set filetype=scss.css
 autocmd BufRead,BufNewFile *.pl set filetype=perl
+autocmd BufRead,BufNewFile *.yj set filetype=yasmjinja
 
 function Comment()
         if &filetype != ''
@@ -99,6 +102,8 @@ function Comment()
                         :s/^/\/\/
                 elseif &filetype == 'cpp'
                         :s/^/\/\/
+                elseif &filetype == 'java'
+                        :s/^/\/\/
                 elseif &filetype == 'matlab'
                         :s/^/%
                 elseif &filetype == 'javascript'
@@ -106,6 +111,8 @@ function Comment()
                 elseif &filetype == 'javascript.jsx'
                         :s/^/\/\/
                 elseif &filetype == 'rust'
+                        :s/^/\/\/
+                elseif &filetype == 'typescript'
                         :s/^/\/\/
                 else
                         :s/^/#
@@ -122,6 +129,8 @@ function UnComment()
                 elseif &filetype == 'c'
                         :s/^\/\//
                 elseif &filetype == 'cpp'
+                        :s/^\/\//
+                elseif &filetype == 'java'
                         :s/^\/\//
                 elseif &filetype == 'matlab'
                         :s/^%/
@@ -188,9 +197,16 @@ endif
 
 autocmd FileType * call <SID>def_basic_syntax()
 
+autocmd FileType yasmjinja cal <SID>def_yasm_jinja_syntax()
+
+function! s:def_yasm_jinja_syntax()
+    syn match extraOperator "\%(<%\|%>\)"
+    syn match extraExpression "\%(for\|endfor\)"
+endfunction
+
 function! s:def_basic_syntax()
     syn match extraOperator "\%(=\|;\| > \| < \| != \| + \| - \|\*\|\.\|:\| / \| % \)"
-    syn match extraOperatorLong "\%(=>\|->\|::\|=>\|*=\|!==\|>>\|<<\|++\|--\|<=\|>=\|%=\|+=\|-=\|=\~\|&&\|/=\||=\)"
+    syn match extraOperatorLong "\%(=>\|->\|::\|=>\|*=\|!==\|>>\|<<\|++\|--\|<=\|>=\|%=\|+=\|-=\|=\~\|&&\|/=\||=\|<%\)"
     syn match perlMethodArrow "->" contained containedin=perlMethod
     syn match perlMethodArrow "->" contained containedin=perlIdentifier
     syn match perlMethodArrow "->" contained containedin=perlVarSimpleMember

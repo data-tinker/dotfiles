@@ -56,6 +56,7 @@ hi vimHiAttrib ctermfg=2
 hi svnDelimiter ctermfg=7
 hi extraOperator ctermfg=243
 hi extraOperatorLong ctermfg=243
+hi extraExpression ctermfg=1
 hi CursorLine cterm=none
 hi Directory ctermfg=7
 
