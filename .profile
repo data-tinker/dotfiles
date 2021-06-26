@@ -23,4 +23,6 @@ export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 #export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.toolbox/bin:$PATH
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
+export JSON_JAVA=/Library/JSON
+export CLASSPATH=$CLASSPATH:$JSON_JAVA/json-simple-1.1.1.jar:.
