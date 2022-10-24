@@ -154,3 +154,8 @@ hi rubyControl ctermfg=5
 hi TabLine ctermbg=234 ctermfg=250 cterm=none
 hi TabLineSel ctermbg=239 ctermfg=7
 hi TabLineFill ctermbg=234 ctermfg=234 cterm=none
+
+" Java
+hi JavaType ctermfg=3
+hi JavaClassDecl ctermfg=3
+hi JavaStorageClass ctermfg=1
